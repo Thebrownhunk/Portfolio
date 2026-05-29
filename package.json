@@ -1,5 +1,10 @@
 {
-  "dependencies": {
-    "react-scripts": "^5.0.1"
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "MERN Portfolio Application",
+  "scripts": {
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && node server.js",
+    "build:frontend": "cd frontend && npm run build"
   }
 }
