@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import profilePic from '../assets/git.png';
 
 const phrases = [
   'MERN Stack Developer',
@@ -57,34 +58,49 @@ export default function Home() {
         style={{background:'radial-gradient(circle,rgba(24,210,110,0.07) 0%,transparent 70%)'}}/>
 
       <div className="relative z-10 max-w-4xl">
-        <motion.p initial={{opacity:0,y:16}} animate={{opacity:1,y:0}} transition={{delay:.15}}
-          className="font-mono text-sm text-[#18d26e] tracking-[3px] uppercase mb-4">
-          // Hello, World!
-        </motion.p>
+        <div className="flex flex-col md:flex-row md:items-start md:gap-12">
+          <section className="flex-1 md:max-w-2xl">
+            <motion.p initial={{opacity:0,y:16}} animate={{opacity:1,y:0}} transition={{delay:.15}}
+              className="font-mono text-sm text-[#18d26e] tracking-[3px] uppercase mb-4">
+              // Hello, World!
+            </motion.p>
 
-        <motion.h1 initial={{opacity:0,y:20}} animate={{opacity:1,y:0}} transition={{delay:.3}}
-          className="text-6xl md:text-8xl font-bold leading-none mb-4 tracking-tight">
-          Ankit Ku.<br/>
-          <span className="text-[#18d26e]">Sahu</span>
-        </motion.h1>
+            <motion.h1 initial={{opacity:0,y:20}} animate={{opacity:1,y:0}} transition={{delay:.3}}
+              className="text-6xl md:text-8xl font-bold leading-none mb-4 tracking-tight">
+              Ankit Ku.<br/>
+              <span className="text-[#18d26e]">Sahu</span>
+            </motion.h1>
 
-        <motion.p initial={{opacity:0,y:16}} animate={{opacity:1,y:0}} transition={{delay:.45}}
-          className="text-white/50 text-lg mb-3">
-          Full-Stack Engineer · Problem Solver · Code Craftsman
-        </motion.p>
+            <motion.p initial={{opacity:0,y:16}} animate={{opacity:1,y:0}} transition={{delay:.45}}
+              className="text-white/50 text-lg mb-3">
+              Full-Stack Engineer · Problem Solver · Code Craftsman
+            </motion.p>
 
-        <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{delay:.6}} className="mb-6 h-8">
-          <Typewriter />
-        </motion.div>
+            <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{delay:.6}} className="mb-6 h-8">
+               <Typewriter />
+            </motion.div>
 
-        <motion.p initial={{opacity:0,y:16}} animate={{opacity:1,y:0}} transition={{delay:.75}}
-          className="text-white/45 text-base leading-7 max-w-xl mb-10">
-          I build scalable, high-performance web applications using the MERN stack — turning complex
-          problems into elegant digital experiences. Based in Bengaluru, shipping globally.
-        </motion.p>
+            <motion.p initial={{opacity:0,y:16}} animate={{opacity:1,y:0}} transition={{delay:.75}}
+              className="text-white/45 text-base leading-7 max-w-xl mb-10">
+              I build scalable, high-performance web applications using the MERN stack — turning complex
+              problems into elegant digital experiences. Based in Bengaluru, shipping globally.
+            </motion.p>
+          </section>
+
+          <section className="mt-10 md:mt-[40px] md:w-[360px] md:ml-auto md:mr-[-200px]">
+            <motion.div initial={{opacity:0,y:20}} animate={{opacity:1,y:0}} transition={{delay:.35}}
+              className="overflow-hidden border-4 border-[#18d26e]/50 shadow-[0_25px_60px_rgba(24,210,110,0.18)]">
+              <img src={profilePic} alt="Ankit Ku Sahu" className="w-full h-auto object-cover" />
+            </motion.div>
+          </section>
+        </div>
+
+         
+
+         
 
         <motion.div initial={{opacity:0,y:16}} animate={{opacity:1,y:0}} transition={{delay:.9}}
-          className="flex flex-wrap gap-4 mb-12">
+          className="flex flex-wrap gap-4 mb-12 mt-6">
           <Link to="/projects"
             className="px-8 py-3.5 bg-[#18d26e] text-black font-bold rounded-lg text-sm tracking-wide
               hover:shadow-[0_0_30px_rgba(24,210,110,0.35)] hover:-translate-y-0.5 transition-all">
